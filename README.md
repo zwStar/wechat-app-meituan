@@ -4,9 +4,12 @@
 
 ### 效果演示
 部分截图
-![主界面](screenshots/index.gif)
-![购物](screenshots/shop.gif)
-![评价](screenshots/comment.gif)
+
+<img src="https://github.com/zwStar/wechat-app-meituan/screenshots/index.gif" width="375" alt="主页"/>
+
+<img src="https://github.com/zwStar/wechat-app-meituan/screenshots/shop.gif" width="375" alt="购物"/>
+
+<img src="https://github.com/zwStar/wechat-app-meituan/screenshots/comment.gif" width="375" alt="评价"/>
 
 ### 关联项目地址
 
