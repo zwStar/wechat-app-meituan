@@ -5,11 +5,11 @@
 ### 效果演示
 部分截图
 
-<img src="https://github.com/zwStar/wechat-app-meituan/screenshots/index.gif" width="375" alt="主页"/>
+<img src="./screenshots/index.gif" width="375" alt="主页"/>
 
-<img src="https://github.com/zwStar/wechat-app-meituan/screenshots/shop.gif" width="375" alt="购物"/>
+<img src="./screenshots/shop.gif" width="375" alt="购物"/>
 
-<img src="https://github.com/zwStar/wechat-app-meituan/screenshots/comment.gif" width="375" alt="评价"/>
+<img src="./screenshots/comment.gif" width="375" alt="评价"/>
 
 ### 关联项目地址
 
