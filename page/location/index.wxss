@@ -1,0 +1,70 @@
+.search-container {
+  min-height: 100vh;
+  background: rgb(244, 244, 244);
+}
+
+.search-form {
+  display: flex;
+  padding-bottom: 20rpx;
+  background: #fff;
+}
+
+.search-input {
+  display:flex;
+  height: 70rpx;
+  align-content: center;
+  flex: 1;
+  background: rgb(239, 238, 244);
+  border-radius: 34rpx;
+  margin: 0 20rpx;
+  padding-left: 20rpx;
+}
+
+.search-input  input {
+  height: 100%;
+  border: none;
+  font-size: 24rpx;
+  outline: none;
+  background: rgba(237, 237, 237, 0.1);
+}
+
+.btn-search {
+  font-size: 24rpx;
+  display: inline-block;
+  color: #fff;
+  background: rgb(145, 145, 145);
+  width: 100rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+}
+
+/* 定位当前位置 */
+
+.location-now {
+  height: 120rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.location-now text {
+  font-size: 35rpx;
+  font-weight: 500;
+  line-height: 120rpx;
+}
+
+.address-item {
+  padding: 30rpx 40rpx;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.address-item .title {
+  font-size: 24rpx;
+}
+
+.address-item .address {
+  font-size: 26rpx;
+  color: #a3a3a3;
+}

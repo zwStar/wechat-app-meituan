@@ -1,0 +1,87 @@
+.restaurant-info image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.restaurant-info .restaurant-name {
+}
+
+.comment-wrap {
+  padding: 30rpx;
+}
+
+.restaurant-info {
+  padding: 0 20rpx 20rpx;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.comment-data-wrap {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  border: 1px solid #d6d6d6;
+}
+
+.btn-submit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 100rpx;
+  text-align: center;
+  background: #89c997;
+}
+
+.upload-pic-wrap {
+  display: flex;
+  margin-top: 30rpx;
+}
+
+.upload {
+  width: 160rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  text-align: center;
+  margin-right: 30rpx;
+  border: 1px solid #d6d6d6;
+}
+
+.icon-paizhao {
+  font-size: 80rpx;
+}
+
+.upload-desc {
+  font-size: 28rpx;
+}
+
+.upload-desc .tip {
+  margin-top: 30rpx;
+}
+
+.upload-image-wrap {
+  position: relative;
+  display: flex;
+}
+
+.upload-image-wrap .icon-close {
+  position: absolute;
+  right: 0;
+  top:0;
+  width: 10px;
+  line-height: 10px;
+  font-size: 22rpx;
+  border-radius: 50%;
+  text-align: center;
+  background: red;
+  color: #fff;
+}
+
+.upload-image {
+  width: 160rpx;
+  height:160rpx;
+  margin-right: 10rpx;
+}
+
+.make-star-wrap {
+  text-align: center;
+  margin: 20rpx 0;
+}

@@ -1,0 +1,191 @@
+<view class="store-detail-container">
+  <!--商家信息-->
+  <view class="store-info">
+
+    <image class="store-avatar" src="{{restaurantInfo.pic_url}}"></image>
+
+    <view class="deliver-info">
+      <text>{{restaurantInfo.min_price_tip}} | {{restaurantInfo.shipping_fee_tip}} | {{restaurantInfo.delivery_time_tip}}</text>
+      <text class="store-bulletin">{{restaurantInfo.bulletin}}</text>
+    </view>
+  </view>
+
+  <!-- tab -->
+  <view class="tab-container">
+    <view class="tab-item {{item.type===tabActive?'tab-active':''}}" wx:for-items="{{tabList}}" data-type="{{item.type}}" bindtap="switchtab" wx:key="{{index}}">
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 点餐 -->
+  <view class="menu-container" hidden="{{tabActive !== 'menu'}}">
+    <view class="left-category-container">
+      <view class="left-category {{categoryActiveIndex === index? 'category-active': ''}}" wx:for-items="{{shopLists}}" wx:key="{{index}}" bindtap="mappingScroll" data-item="{{index}}">
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+
+    <scroll-view class="right-foods-container" scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view class="foods-item-wrap" wx:for-items="{{shopLists}}" wx:key="{{index}}" id="{{'v'+index}}">
+        <view class="category-title">{{item.name}}</view>
+        <view class="foods-item" wx:for="{{item.spus}}" wx:for-item="items" wx:key="{{index}}">
+          <image class="img-foods" src="{{items.pic_url}}"></image>
+          <view class="foods-info">
+            <view class="foods-name">
+              <text>{{items.name}}</text>
+            </view>
+
+            <text>月售{{items.month_saled}}</text>
+            <view class="foods-price">￥{{items['skus'][0].price}}</view>
+          </view>
+
+          <view class="selector-container">
+            <view class="icon-wrap" hidden="{{!cartInfo[items.id] || !cartInfo[items.id].num}}" bindtap="reduceCart" data-item="{{items}}">
+              <view class="iconfont icon-jian"></view>
+            </view>
+            <view class="num" hidden="{{!cartInfo[items.id] || !cartInfo[items.id].num}}">
+              {{cartInfo[items.id] && cartInfo[items.id].num}}</view>
+            <view class="icon-wrap" bindtap="addCart" data-item="{{items}}">
+              <view class="iconfont icon-jia"></view>
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+    </scroll-view>
+
+  </view>
+  <!-- 评价 -->
+
+  <view class="comment-container" hidden="{{tabActive !== 'comment'}}">
+    <view class="comment-score-container">
+      <view>
+        <view class="comment-store-score">{{restaurantInfo.wm_poi_score}}</view>
+        <text class="comment-store-score-txt">商家评分</text>
+      </view>
+
+      <view>
+
+        <view>
+          <text class="text-taste">口味</text>
+          <text class="color-yellow">{{restaurantInfo.food_score}}</text>
+        </view>
+
+        <view>
+          <text class="text-package">包装</text>
+          <text class="color-yellow">{{restaurantInfo.pack_score}}</text>
+        </view>
+      </view>
+
+      <view>
+        <view class="comment-delivery-score">{{restaurantInfo.delivery_score}}</view>
+        <text class="comment-delivery-score-txt">配送评分</text>
+      </view>
+
+    </view>
+
+    <view class="comment-container">
+      <view class="comment-scroll-container">
+        <view class="comment-item" wx:for="{{commentLists}}" wx:for-item="commentItem" wx:key="{{index}}">
+
+          <image class="user-avatar" src="{{commentItem.avatar}}"></image>
+
+
+          <view class="comment-list">
+            <view class="comment-user-info-detail">
+              <text class="comment-user-name">{{commentItem.user_name}}</text>
+              <text class="comment-time">{{commentItem.comment_time}}</text>
+            </view>
+
+            <view class="comment-order-score">
+              <text>评分</text>
+              <star score="{{commentItem.food_score}}"></star>
+            </view>
+
+            <view class="comment-content">
+              <text>{{commentItem.comment_data}}</text>
+            </view>
+
+            <view>
+
+              <view class="comment-pic">
+                <image bindtap="showPreviewImage" wx:for="{{commentItem.pic_url}}" wx:for-item="picture" class="foods-picture-item" data-item="{{picture}}" src="{{picture}}" wx:key="{{index}}"></image>
+              </view>
+            </view>
+            <view class="reply-wrap" hidden="{{!commentItem.add_comment_list || !commentItem.add_comment_list.length}}">
+              <text>{{commentItem.add_comment_list[0].content}}</text>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 商家 -->
+  <view class="seller-info-container" hidden="{{tabActive !== 'seller'}}">
+    <!--地址信息-->
+    <view class="info-item-container">
+      <text class="location-icon icon">
+      </text>
+      <text class="address describe">{{restaurantInfo.address}}</text>
+      <text class="phone-icon icon">
+       </text>
+    </view>
+
+    <!--配送服务-->
+    <view class="info-item-container">
+      <text class="describe">配送服务:由 商家 提供配送服务</text>
+    </view>
+
+    <!--配送时间-->
+    <view class="delivery-time info-item-container">
+      <text class="icon">
+        <i class="iconfont">&#xe62f;</i>
+      </text>
+      <text class="describe">配送时间: {{restaurantInfo.shopping_time_start}} - {{restaurantInfo.shopping_time_end}}</text>
+    </view>
+
+    <!--公告-->
+    <view class="notification info-item-container" v-if="poi_info.bulletin">
+      <text class="icon">
+        <i class="iconfont">&#xe6aa;</i>
+      </text>
+      <text class="describe ellipsis">{{restaurantInfo.bulletin}}</text>
+      <text class="entry-icon icon">
+        <i class="iconfont">&#xe63f;</i>
+      </text>
+    </view>
+    <!--商家服务-->
+    <view class="poi-service info-item-container">
+      <text class="icon">
+        <i class="iconfont">&#xe632;</i>
+      </text>
+      <text class="service">商家服务</text>
+      <text v-for="(service,index) in sellerInfo.poi_service" :key="index">
+        <i class="icon-service" :style="{backgroundImage:'url('+ service.icon +')'}"></i>
+        <text>{{service.content}}</text>
+      </text>
+    </view>
+  </view>
+
+  <!-- 购物车底部 -->
+  <view class="cart-container">
+    <view class="cart-left-part">
+      <view class="cart-price-info">
+        <view class="cart-icon-wrap {{totalPrice ? 'active':'' }}">
+          <view class="iconfont icon-xiazai1"></view>
+        </view>
+
+        <view class="cart-price-wrap">
+          <view class="cart-price">￥{{totalPrice}}</view>
+          <text class="cart-deliver-fee">免配送费</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="btn-go-pay btn-go-pay-active" bindtap="goPay">去结算</view>
+  </view>
+
+</view>

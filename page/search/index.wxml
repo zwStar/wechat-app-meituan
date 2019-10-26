@@ -1,0 +1,21 @@
+<view class="search-container">
+  <view class="search-form">
+    <view class="search-input">
+      <input type="text" auto-focus maxlength="20" name="name" bindinput="inputext" placeholder="请输入商品 店铺名" value="{{keyword}}" confirm-type="search" bindconfirm="handleSearch"/>
+    </view>
+
+
+    <view class="btn-search" bindtap="handleSearch">
+      <text>搜索</text>
+    </view>
+  </view>
+
+  <view class="search-lists">
+    <navigator url="/page/store/index?id={{item.id}}" class="search-item" wx:for-items="{{shopLists}}">
+      <image class="avatar" src="{{item.pic_url}}"></image>
+      <text class="name">{{item.name}}</text>
+      <text class="delivery-time">{{item.delivery_time_tip}}送达</text>
+    </navigator>
+  </view>
+
+</view>

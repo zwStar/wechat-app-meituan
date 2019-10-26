@@ -1,0 +1,378 @@
+.store-detail-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.store-info {
+  display: flex;
+  padding-bottom: 20rpx;
+  background: #000;
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.store-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 15rpx;
+}
+
+.store-info .deliver-info text {
+  font-size: 28rpx;
+}
+
+.store-info .store-bulletin {
+  width: 545rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 10rpx;
+}
+
+.deliver-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* text {
+    color: rgb(214, 214, 214);
+    font-size: 0.35rem;
+    margin-top: 0.1rem;
+  } 
+
+ text {
+    width: 200rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }*/
+}
+
+.deliver-info text {
+  color: rgb(214, 214, 214);
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+
+.icon-broadcast {
+  display: inline-block;
+  font-size: 20rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.tab-container {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.tab-container .tab-item {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 25rpx;
+}
+
+.tab-active {
+  color: #89c997;
+  margin-bottom: 10rpx;
+  border-bottom: 3px solid #89c997;
+}
+
+.info-item-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid rgb(214, 214, 214);
+  padding: 0 10rpx;
+}
+
+.info-item-container text {
+  font-size: 26rpx;
+}
+
+.menu-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 100rpx;
+}
+
+.menu-container .left-category-container {
+  width: 200rpx;
+  background: #f4f4f4;
+  /* overflow: auto; */
+}
+
+.menu-container .left-category-container .left-category {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed #d6d6d6;
+  padding-left: 15rpx;
+}
+
+.menu-container .left-category-container text {
+  font-size: 30rpx;
+}
+
+.right-foods-container {
+  overflow: scroll;
+}
+
+.menu-container .img-foods {
+  width: 140rpx;
+  height: 120rpx;
+  margin: 10rpx;
+}
+
+.foods-item {
+  display: flex;
+  position: relative;
+}
+
+.foods-item .foods-name {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.foods-item .foods-price {
+  color: #fb4f45;
+}
+
+.foods-item .foods-info, .foods-item .foods-description {
+  font-size: 30rpx;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  padding-bottom: 40rpx;
+}
+
+.comment-scroll-container {
+  overflow: auto;
+}
+
+.comment-container .user-avatar {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.comment-container .text-taste, .comment-container .text-package {
+  font-size: 32rpx;
+  margin-right: 20rpx;
+}
+
+.comment-container .reply-wrap {
+  padding: 10rpx;
+  color: #999;
+  background: rgb(230, 227, 227);
+  font-size: 26rpx;
+  border-radius: 2rpx;
+}
+
+.foods-picture-item {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 10rpx;
+}
+
+/* 评论 */
+
+.comment-score-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.comment-score-container > view {
+  flex: 1;
+}
+
+.comment-score-container .comment-store-score {
+  font-size: 60rpx;
+  color: #ffb000;
+}
+
+.color-yellow {
+  color: #ffb000;
+}
+
+.comment-score-container .comment-delivery-score {
+  font-size: 60rpx;
+  color: #999;
+}
+
+.comment-store-score-txt, .comment-delivery-score-txt {
+  font-size: 26rpx;
+}
+
+.comment-item {
+  display: flex;
+  margin: 20rpx;
+  padding-right: 10rpx;
+}
+
+.comment-item .comment-user-info-detail {
+  font-size: 28rpx;
+}
+
+.comment-item .user-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 30rpx;
+  border-radius: 50%;
+}
+
+.comment-item .comment-list {
+  flex: 1;
+  margin-top: 10rpx;
+}
+
+.comment-item .comment-list > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-item .comment-list .comment-order-score text {
+  font-size: 24rpx;
+}
+
+.comment-item .comment-list .comment-content {
+  font-size: 26rpx;
+  margin: 20rpx 0;
+}
+
+.comment-item .comment-time {
+  float: right;
+}
+
+.comment-pic .foods-picture-item {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/* 商家 */
+
+.seller-info-container > view {
+  padding: 0 30rpx;
+  line-height: 80rpx;
+}
+
+/* 购物车 */
+
+.cart-container {
+  display: flex;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  z-index: 103;
+}
+
+.cart-container .cart-left-part {
+  flex: 1;
+  padding-left: 170rpx;
+}
+
+.cart-container .cart-price-wrap {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.cart-container .cart-left-part .cart-price {
+  font-size: 45rpx;
+  color: #fff;
+}
+
+.cart-container .cart-deliver-fee {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.cart-container .cart-icon-wrap {
+  position: absolute;
+  top: -40rpx;
+  left: 30rpx;
+  padding: 15rpx;
+  border-radius: 50%;
+  background: #666;
+}
+
+.cart-container .active {
+  background: #89c997;
+}
+
+.cart-container .cart-icon-wrap .icon-xiazai1 {
+  font-size: 80rpx;
+}
+
+.cart-container .cart-left-part .cart-price-fee {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.cart-container .btn-go-pay {
+  width: 210rpx;
+  line-height: 100rpx;
+  font-weight: 500;
+  font-size: 36rpx;
+  background: #2c2c2c;
+  text-align: center;
+}
+
+.cart-container .btn-go-pay-active {
+  color: #000;
+  background: #89c997;
+}
+
+.selector-container {
+  display: flex;
+  align-content: center;
+  position: absolute;
+  right: 10rpx;
+  top: 50rpx;
+}
+
+.selector-container .icon-jia, .selector-container .icon-jian {
+  padding: 7rpx;
+  border-radius: 50%;
+}
+
+.selector-container .icon-jia {
+  background: #89c997;
+}
+
+.selector-container .num {
+  font-size: 26rpx;
+  margin: 0 10rpx;
+  line-height: 92rpx;
+}
+
+.icon-wrap {
+  padding: 20rpx;
+}
+
+.selector-container .icon-jian {
+  border: 1px solid #d6d6d6;
+}
+
+.category-title {
+  font-size: 30rpx;
+  padding: 20rpx 0 20rpx 40rpx;
+}
+
+.category-active {
+  background: #fff;
+}

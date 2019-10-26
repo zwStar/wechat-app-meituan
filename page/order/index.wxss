@@ -1,0 +1,83 @@
+/* page/order/index.wxss */
+
+.order-container {
+  padding-bottom: 40rpx;
+}
+
+.order-container .store-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border: 1px solid #eee;
+}
+
+.order-container .store-info {
+  display: flex;
+  line-height: 80rpx;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.order-container .store-info .store-name {
+  flex: 1;
+  font-size: 32rpx;
+  margin-left: 30rpx;
+}
+
+.order-container .store-info .order-status {
+  color: #999;
+  font-size: 30rpx;
+  
+}
+
+.order-container .food-info {
+  display: flex;
+  margin: 20rpx 0 20rpx 60rpx;
+}
+
+.order-container .food-name {
+  flex: 1;
+  font-size: 28rpx;
+  color: #999;
+  font-weight: bold;
+}
+
+.order-container .food-num {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.order-container .pay-info {
+  text-align: right;
+  font-size: 26rpx;
+}
+
+
+
+.order-container .order-item {
+  padding:0 50rpx 0 20rpx;
+  margin-top: 20rpx;
+}
+
+.footer {
+  display: flex;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  justify-content: flex-end;
+}
+
+.footer .buy-again,
+.footer .comment {
+  width: 150rpx;
+  line-height: 60rpx;
+  text-align: center;
+  
+}
+
+.footer .buy-again {
+  border: 1px solid #eee;
+}
+
+.footer .comment {
+  margin-left: 20rpx;
+  background: #89c997;
+}

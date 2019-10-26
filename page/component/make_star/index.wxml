@@ -1,0 +1,4 @@
+  <view class="star">
+    <view class="on" wx:for-items="{{score}}" data-value="{{index +1 }}" bindtap="makeScore" wx:key="{{index}}"></view>
+    <view class="off" wx:for-items="{{(5 - score)}}" data-value="{{item + score + 1}}" bindtap="makeScore" wx:key="{{index}}"></view>
+  </view>

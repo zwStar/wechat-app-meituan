@@ -1,0 +1,19 @@
+<!-- 我的 -->
+<view class="hone-container">
+  <view class="home-header">
+    <open-data type="userAvatarUrl" class="user-image" lang="en"></open-data>
+    <view class="user-info">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+
+  <view class="user-fun-container">
+     <navigator class="user-fun-item" wx:for-items="{{funList}}" wx:key="{{item.id}}" url="{{item.path}}">
+        <view class="image-warp">
+          <image src="{{item.icon}}"/>
+        </view>
+        <view class="my-order text">{{item.name}}</view>
+        <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+      </navigator>
+  </view>
+</view>

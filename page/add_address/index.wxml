@@ -1,0 +1,56 @@
+<view>
+  <view>
+    <view class="title">联系人</view>
+
+    <view>
+      <view class="address-item">
+        <text class="label">姓名：</text>
+        <input placeholder="请输入您的姓名" bindinput="inputname" value="{{name}}"></input>
+      </view>
+
+      <view class="address-item">
+        <text class="label"></text>
+        <view class="gender-wrap">
+          <label bindtap="genderChange">
+            <text class="iconfont icon-dui" hidden="{{gender === 'famale'}}"></text>
+            <text class="iconfont icon-yuanhuan" hidden="{{gender === 'male'}}"></text>
+            <text class="text">先生</text>
+          </label>
+
+          <label bindtap="genderChange">
+            <text class="iconfont icon-dui" hidden="{{gender === 'male'}}"></text>
+            <text class="iconfont icon-yuanhuan" hidden="{{gender === 'famale'}}"></text>
+            <text class="text">女士</text>
+          </label>
+        </view>
+      </view>
+
+      <view class="address-item">
+        <text class="label">电话：</text>
+        <input placeholder="请输入您的电话" bindinput="inputphone" value="{{phone}}"></input>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class="title">收获地址</view>
+
+    <view>
+      <view class="address-item">
+        <text class="label">小区/大厦/学校：</text>
+        <navigator class="address-text" url="/page/location/index">{{addressInfo.title}}</navigator>
+      </view>
+
+      <view>
+
+      </view>
+
+      <view class="address-item">
+        <text class="label">楼号-门牌号：</text>
+        <input placeholder="请输入您的门牌号" bindinput="inputHouseNumber"></input>
+      </view>
+    </view>
+  </view>
+
+  <view class="btn-submit" bindtap="handleSubmit">确定</view>
+</view>

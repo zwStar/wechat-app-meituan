@@ -1,0 +1,37 @@
+<!-- 订单评论页面 -->
+
+<view class="comment">
+  <view class="comment-wrap">
+    <view class="restaurant-info">
+      <image src="{{restaurantInfo.pic_url}}"></image>
+      <text class="restaurant-name">{{restaurantInfo.name}}</text>
+    </view>
+
+    <view class="make-star-wrap">
+      <make-star bind:makeScore="makeScore"></make-star>
+    </view>
+
+    <view class="food-comment">
+      <textarea class="comment-data-wrap" bindinput="inputcomment" value="{{commentData}}" placeholder="亲，菜品口味如何，对包装服务等还满意吗？"></textarea>
+    </view>
+
+    <view class="upload-pic-wrap">
+      <label class="upload" bindtap="chooseImage">
+        <text class="iconfont icon-paizhao"></text>
+      </label>
+      <view class="upload-desc" hidden="{{images.length>0}}">
+        <text>上传图片</text>
+        <view class="tip">内容丰富的评论有机会成为优质评价哦</view>
+      </view>
+
+      <view class="upload-image-wrap" wx:for-items="{{images}}" wx:key="{{index}}">
+        <image class="upload-image" src="{{item}}"></image>
+        <view class="icon-close" data-index="{{index}}" bindtap="deleteImages">x</view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="btn-submit" bindtap="submitComment">提交</view>
+
+</view>

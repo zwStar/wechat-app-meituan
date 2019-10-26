@@ -1,0 +1,92 @@
+<view class="order-detail">
+  <view class="order-status-wrap">
+    <view class="text">感谢您对莞工外卖的支持，欢迎再次光临</view>
+    <navigator url="/page/store/index?id={{restaurantInfo.id}}" class="buy-again">再来一单</navigator>
+  </view>
+
+  <view class="order-foods-wrap">
+    <view class="header">
+      <image class="restaurant-avatar" src="{{restaurantInfo.pic_url}}"></image>
+      <text class="restaurant-name">{{restaurantInfo.name}}</text>
+    </view>
+
+    <view>
+      <view class="foods-wrap" wx:for-items="{{foodsList}}">
+        <image class="foods-img" src="{{item.pic_url}}"></image>
+
+        <view class="foods-detail-info-wrap">
+          <text class="foods-name">{{item.name}}</text>
+          <text class="foods-price">￥{{item.price}}</text>
+          <view class="foods-num">x{{item.num}}</view>
+        </view>
+      </view>
+
+      <view class="other-fee">
+        <text>餐盒费</text>
+        <text>￥0</text>
+      </view>
+
+      <view class="other-fee">
+        <text>配送费</text>
+        <text>￥0</text>
+      </view>
+
+      <view class="total-price-wrap">
+        <text>总计￥{{orderInfo.total_price}} 优惠￥0 实付 ￥{{orderInfo.total_price}}</text>
+      </view>
+    </view>
+
+    <view class="connect-restatuarnt-warp">
+      <view class="title">联系商家</view>
+
+      <view class="order-info-item">
+        <text class="label">期望时间：</text>
+        <text class="value">立即配送</text>
+      </view>
+
+
+
+      <view class="order-info-item">
+        <view class="order-info-item">
+          <text class="label">收货人员：</text>
+          <text class="value">{{address.name}}</text>
+        </view>
+
+        <view class="order-info-item">
+          <text class="label">收货号码：</text>
+          <text class="value">{{address.phone}}</text>
+        </view>
+
+        <text class="label">配送地址：</text>
+        <text class="value">{{address.address}}</text>
+      </view>
+
+
+      <view class="order-info-item">
+        <text class="label">配送服务：</text>
+        <text class="value">由 商家 提供配送服务</text>
+      </view>
+
+
+    </view>
+
+    <view class="order-info-wrap">
+      <view class="order-info-item">
+        <text class="label">订单号码：</text>
+        <text class="value">{{orderInfo.id}}</text>
+      </view>
+
+      <view class="order-info-item">
+        <text class="label">订单时间：</text>
+        <text class="value">{{orderInfo.create_time}}</text>
+      </view>
+
+      <!-- <view class="order-info-item">
+        <text class="label">支付方式：</text>
+        <text class="value">在线支付</text>
+      </view> -->
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#000",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "商店",
+  "usingComponents": {
+    "star": "/page/component/star/index"
+  }
+}

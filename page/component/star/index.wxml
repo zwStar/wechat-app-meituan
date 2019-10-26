@@ -1,0 +1,5 @@
+<view class="star">
+  <view class="on" wx:for-items="{{on}}" wx:key="{{index}}"></view>
+  <view class="half" wx:for-items="{{half}}" wx:key="{{index}}"></view>
+  <view class="off" wx:for-items="{{(5 - on - half)}}" wx:key="{{index}}"></view>
+</view>

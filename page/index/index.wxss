@@ -1,0 +1,194 @@
+.toolbar {
+  display: flex;
+  margin-bottom: 30rpx;
+}
+
+.toolbar-location, .toolbar-search {
+  display: flex;
+  align-items: center;
+  border-radius: 4rpx;
+  height: 57rpx;
+}
+
+.toolbar-location {
+  display: flex;
+  width: 250rpx;
+  font-size: 30rpx;
+  margin: 0 20rpx;
+  border-radius: 30rpx;
+  padding-left: 20rpx;
+  background: rgb(166, 166, 166);
+}
+
+.toolbar-search {
+  display: flex;
+  flex: 1;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+  background: rgb(237, 237, 237);
+  margin-right: 10rpx;
+  align-items: center;
+  padding-left: 20rpx;
+}
+
+.nav-container {
+  height: 360rpx;
+}
+
+.nav-item {
+  width: 25%;
+  text-align: center;
+  height: 140rpx;
+  margin: 20rpx 0;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav-item text {
+  font-size: 30rpx;
+}
+
+.nav-image-item {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 15rpx;
+}
+
+.shop-item {
+  display: flex;
+  padding: 15rpx 0;
+  margin: 0 20rpx;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.shop-avatar {
+  width: 170rpx;
+  height: 130rpx;
+  margin-right: 15rpx;
+  border: 1px solid rgb(214, 214, 214);
+  text-align: center;
+}
+
+.shop-info-detail {
+  flex: 1;
+  text-align: left;
+}
+
+.shop-info-detail .shop-name {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.deliver-info {
+  float: right;
+}
+
+.shop-sales-tip, .deliver-info, .price-message {
+  font-size: 25rpx;
+}
+
+.nearby-shops-container {
+  text-align: center;
+}
+
+.nearby-shops-container .line {
+  vertical-align: middle;
+  display: inline-block;
+  width: 100rpx;
+  height: 0;
+  border-bottom: 1px solid #000;
+}
+
+.nearby-shops-container .nearby-text {
+  font-size: 38rpx;
+  display: inline-block;
+  margin: 10rpx 30rpx;
+}
+
+.nearby-filter-container {
+  display: flex;
+  margin: 30rpx 0;
+  line-height: 80rpx;
+}
+
+.nearby-list {
+  padding-top: 10rpx;
+  margin-top: 10rpx;
+  border-top: 1px solid #e4e4e4;
+}
+
+.nearby-filter-item {
+  font-size: 32rpx;
+  text-align: center;
+  padding: 0 15rpx;
+  flex: 1;
+}
+
+/* 折扣列表样式 */
+
+.active-message {
+}
+
+.active-message .icon {
+  margin-right: 0.15rem;
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.active-message .info {
+  color: #777272;
+  font-size: 25rpx;
+  display: inline-block;
+  width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.win-auth-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+}
+
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+}
+
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.content {
+  text-align: center;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-bottom: 90rpx;
+}
+
+.content text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+}
+
+.bottom {
+  width: 500rpx;
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+}

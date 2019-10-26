@@ -1,0 +1,28 @@
+<view class="order-container">
+  <view class="order-item" wx:for-items="{{orderList}}" wx:key="{{index}}">
+    <view class="store-info">
+      <image class="store-avatar" src="{{item.restaurant.pic_url}}"></image>
+      <navigator class="store-name" url="/page/store/index?id={{item.restaurant.id}}">{{item.restaurant.name}}></navigator>
+      <text class="order-status">订单已完成</text>
+    </view>
+
+    <navigator url="/page/order_detail/index?id={{item.id}}">
+      <view wx:for="{{item.foods}}" wx:for-item="foodItem" wx:key="{{index}}">
+        <view class="food-info">
+          <text class="food-name">{{foodItem.name}}</text>
+          <text class="food-num">x{{foodItem.num}}</text>
+        </view>
+      </view>
+    </navigator>
+
+    <view class="pay-info">
+      <text>共{{item.foods.length}}件商品，实付￥{{item.total_price}}</text>
+    </view>
+
+    <view class="footer">
+      <navigator class="buy-again" url="/page/store/index?id={{item.restaurant.id}}">再来一单</navigator>
+      <navigator class="comment" hidden="{{item.has_comment}}" url="/page/comment/index?id={{item.id}}">评价</navigator>
+    </view>
+  </view>
+
+</view>

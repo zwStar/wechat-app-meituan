@@ -1,0 +1,56 @@
+.title {
+  font-size: 26rpx;
+  margin: 30rpx 10rpx;
+
+}
+
+.label {
+  width: 260rpx;
+  font-size: 32rpx;
+
+}
+
+.address-item {
+  display: flex;
+  align-items: center;
+  padding: 0 10rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.address-item input {
+  font-size: 32rpx;
+  padding: 20rpx 0;
+}
+
+.address-item .address-text {
+  font-size: 32rpx;
+}
+
+.icon-dui {
+  font-size: 34rpx;
+}
+
+.icon-yuanhuan {
+  font-size: 38rpx;
+}
+
+.gender-wrap label{
+  margin-right: 30rpx;
+}
+
+.gender-wrap .text {
+  font-size:32rpx;
+  margin-left:18rpx;
+}
+
+.btn-submit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 100rpx;
+  background: #89c997;
+  text-align: center;
+  
+}

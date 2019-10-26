@@ -1,0 +1,22 @@
+<!-- 我的收货地址 -->
+
+<view class="address-manager-container">
+  <view>
+    <text>我的收获地址</text>
+    <!-- <span v-show="!status" @click="managerAddress()">管理</span>
+    <span v-show="status" @click="finish()">完成</span> -->
+  </view>
+
+  <view class="address-list-container">
+    <view wx-for-items="(item,index) in addressLists" :key="item.id">
+      <view>
+        <text>{{item.address}} {{item.house_number}}</text>
+        <text class="name">{{item.name}}</text>
+        <text class="sex">{{item.gender === 'female' ? '女士' : '先生'}}</text>
+        <text class="phone">{{item.phone}}</text>
+      </view>
+
+    </view>
+  </view>
+
+</view>

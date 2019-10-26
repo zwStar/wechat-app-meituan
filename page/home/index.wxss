@@ -1,0 +1,42 @@
+.hone-container {
+  background-color: #fff;
+}
+
+.home-header {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    padding: 14rpx 22rpx;
+    box-sizing: border-box;
+    border-radius: 0 0 10rpx 10rpx;
+}
+
+.user-image {
+    display: block;
+    width: 146rpx;
+    height: 146rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 70rpx;
+}
+
+.image-warp image{
+     width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+    vertical-align: middle;
+}
+
+.user-fun-container {
+  padding-left: 40rpx;
+  margin-top: 40rpx;
+}
+
+.user-fun-item {
+  font-size: 30rpx;
+  display: flex;
+  line-height: 80rpx;
+  border-bottom: 1px solid #e4e4e4;
+  margin: 30rpx 0;
+}

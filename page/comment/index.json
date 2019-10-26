@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "评论",
+  "usingComponents": {
+    "make-star": "/page/component/make_star/index"
+  }
+}

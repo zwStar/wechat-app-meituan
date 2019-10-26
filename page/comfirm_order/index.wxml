@@ -1,0 +1,82 @@
+<view class="comfirm-order-container">
+  <navigator class="main-info-container" url="/page/address/index">
+    <view wx:if="{{addressInfo.address}}">
+      <view class="address-info-detail">{{addressInfo.address}}</view>
+      <view class="user-info-container">
+        <text class="address-info-name">{{addressInfo.name}}</text>
+        <text class="address-gender">{{addressInfo.gender === 'male' ? '先生' : '女士'}}</text>
+        <text class="address-phone">{{addressInfo.phone}}</text>
+      </view>
+    </view>
+
+    <view wx:else class="add-addresss-wrap" :hidden="{{addressInfo.address}}">
+      <view>添加收货地址</view>
+    </view>
+  </navigator>
+
+  <view class="deliver-time-container">
+    <text>配送方式：蜂鸟专送</text>
+  </view>
+
+  <view>
+    <view class="store-info">
+      <image class="store-pic" src="{{restaurantInfo.picUrl}}"></image>
+      <text>{{restaurantInfo.name}}</text>
+    </view>
+  </view>
+
+  <!-- 商品列表 -->
+  <view class="foods-container">
+    <view class="foods-item" wx:for-items="{{foodsList}}">
+      <image class="foods-pic" src="{{item.pic_url}}"></image>
+      <view class="foods-info">
+        <view>
+          <text class="name">{{item.name}}</text>
+          <text class="price">￥{{item.price}}</text>
+        </view>
+
+        <view class="num">
+          <text>x{{item.num}}</text>
+        </view>
+
+        <view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 其它费用 -->
+
+  <view class="other-fee-container">
+    <view class="fee-item">
+      <text>包装费</text>
+      <text class="price">￥0</text>
+    </view>
+
+    <view class="fee-item">
+      <text>包装费</text>
+      <text class="price">￥0</text>
+    </view>
+  </view>
+
+  <!-- 优惠 -->
+
+  <view class="discount-fee-container">
+    <text class="discount-fee">已优惠￥0</text>
+    <text class="discount-total">小计<text class="price">￥{{totalPrice}}</text></text>
+  </view>
+
+  <!-- 提交 -->
+  <view class="footer">
+
+    <view class="left-part">
+
+      <text>已优惠￥0</text>
+
+      <text class="total-price">合计 <text class="price">￥{{totalPrice}}</text> </text>
+    </view>
+
+    <view class="btn-submit-order" bindtap="submitOrder">提交订单</view>
+  </view>
+
+</view>

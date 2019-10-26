@@ -1,0 +1,51 @@
+/* page/address/index.wxss */
+
+.address-container {
+  min-height: 100vh;
+  background: #f4f4f4;
+}
+
+.address-item {
+  position: relative;
+  background: #fff;
+  padding: 20rpx;
+  margin-top: 16rpx;
+}
+
+.address-item .address {
+  font-size: 30rpx;
+}
+
+.address-item .name {
+  font-size: 28rpx;
+}
+
+.address-item .gender {
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+
+.address-item .phone {
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+
+.address-item .icon-delete {
+  width: 30rpx;
+  height: 30rpx;
+  color: red;
+  position: absolute;
+  right: 20rpx;
+  top: 42rpx;
+}
+
+.btn-add-address {
+  width: 100%;
+  line-height: 120rpx;
+  font-size: 34rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background: #fff;
+}

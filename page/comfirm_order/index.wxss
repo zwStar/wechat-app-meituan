@@ -1,0 +1,130 @@
+
+.main-info-container {
+  padding: 20rpx;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.main-info-container .address-info-detail {
+  font-size: 32rpx;
+}
+
+.user-info-container {
+  font-size: 26rpx;
+  margin-top: 14rpx;
+}
+
+.deliver-time-container {
+  line-height: 70rpx;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+}
+
+.store-info text {
+  font-size: 28rpx;
+}
+
+
+ .foods-info .name{
+  font-size: 32rpx;
+}
+
+.store-pic {
+  width: 60rpx;
+  height: 60rpx;
+  padding: 0 20rpx;
+}
+
+.foods-container .name {
+}
+
+.foods-item {
+  display: flex;
+  margin-top: 20rpx;
+  background: #fbfbfb;
+  padding: 30rpx;
+}
+
+.foods-item .foods-pic {
+  width: 140rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+}
+
+.foods-item .foods-info {
+  flex: 1;
+}
+
+.foods-container .price {
+  font-size: 26rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+
+.foods-item .num {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.other-fee-container .fee-item {
+  font-size: 30rpx;
+  padding: 20rpx;
+}
+
+.other-fee-container .fee-item .price {
+  float: right;
+}
+
+.discount-fee-container {
+  margin-top: 30rpx;
+  margin-bottom: 150rpx;
+  font-size: 30rpx;
+  text-align: right;
+}
+
+.discount-fee-container .discount-fee {
+  color: #999;
+  padding-right: 20rpx;
+}
+
+.discount-fee-container  .price {
+  color: #fb4e44;
+  padding-right: 20rpx;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  line-height: 120rpx;
+  padding-left: 40rpx;
+  background: #fff;
+}
+
+.footer .total-price {
+  margin-left: 100rpx;
+}
+
+.footer .total-price .price {
+  font-size: 30rpx;
+  color: #fb4e44;
+}
+
+.footer .left-part {
+  flex: 1;
+}
+
+.btn-submit-order {
+  width: 200rpx;
+  height: 100%;
+  text-align: center;
+  background: #89c997;
+}
+
+
+/* 添加收货地址 */
+.add-addresss-wrap {
+  font-size: 28rpx;
+  
+}

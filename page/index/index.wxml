@@ -1,0 +1,82 @@
+<!-- 首页 -->
+<view class="index-container">
+  <view class="toolbar">
+    <navigator class="toolbar-location" url="/page/location/index">
+      <text>{{address}}</text>
+    </navigator>
+
+    <navigator class="toolbar-search" url="/page/search/index">
+      <text>请输入商家 商品名</text>
+    </navigator>
+  </view>
+
+  <swiper class="nav-container">
+    <swiper-item class="nav-item-swiper" wx:for-items="{{categoryListSort}}" wx:key="{{item.id}}">
+      <view class="nav-item" wx:for="{{item}}" wx:for-item="items" wx:key="{{item.id}}">
+        <image class="nav-image-item" src="{{items.url}}" mode="aspectFill"></image>
+        <text>{{items.name}}</text>
+      </view>
+    </swiper-item>
+
+  </swiper>
+
+  <view class="nearby-shops-container">
+    <view class="line"></view>
+    <text class="nearby-text">附近商家</text>
+    <view class="line"></view>
+
+    <!-- <view class="nearby-filter-container">
+      <view class="nearby-filter-item" wx:for-items="{{filterOptions}}" wx:key="index">{{item}} </view>
+    </view> -->
+
+    <view class="nearby-list">
+      <navigator class="shop-item" wx:for-items="{{shopLists}}" wx:key="{{index}}" url="/page/store/index?id={{item.id}}">
+        <image class="shop-avatar" src="{{item.pic_url}}"></image>
+
+        <view class="shop-info-detail">
+          <text class="shop-name">{{item.name}}</text>
+          <view>
+            <star score="{{item.wm_poi_score}}"></star>
+            <text class="shop-sales-tip">{{item.month_sales_tip}}</text>
+            <view class="deliver-info">
+              <!-- <text class="deliver-time">{{item.delivery_time_tip}}/</text> -->
+              <text class="distance">{{item.distance}}</text>
+            </view>
+
+            <view class="price-message">
+              <!-- <text>{{item.min_price_tip}} | </text> -->
+              <!-- <text>{{item.shipping_fee_tip}} | </text> -->
+              <!-- <text>{{item.average_price_tip}}</text> -->
+              <text>起送￥0 | </text>
+              <text>配送￥0 | </text>
+            </view>
+
+            <view class="active-message">
+              <view wx:for="{{item.discounts2}}" wx:for-item="discount" wx:key="{{index}}">
+                <view class="discount-left">
+                  <image src="{{discount.icon_url}}" class="icon"></image>
+                  <text class="info">{{discount.info}}</text>
+                </view>
+
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+
+  <view wx:if="{{isHide}}" class="win-auth-wrap">
+    <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)并授权登录</text>
+    </view>
+
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+  </view>
+
+</view>

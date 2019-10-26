@@ -1,0 +1,14 @@
+<!-- 我的收获地址页面 -->
+<view class="address-container">
+  <view class="address-item" wx:for-items="{{addressList}}" data-item="{{item}}" bindtap="selectAddress">
+    <view class="address">{{item.address}}</view>
+    <view>
+      <text class="name">{{item.name}}</text>
+      <text class="gender">{{item.gender === 'female' ? '女士' : '先生'}}</text>
+      <text class="phone">{{item.phone}}</text>
+       <view class="iconfont icon-delete" data-index="{{index}}" bindtap="deleteAddress"></view>
+    </view>
+  </view>
+
+  <navigator url="/page/add_address/index" class="btn-add-address">新增收获地址</navigator>
+</view>
